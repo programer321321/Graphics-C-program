@@ -10,6 +10,7 @@
 #include <QPainter>
 #include <qDebug>
 #include <QMouseEvent>
+#include <QTimer>
 
 class Sketch : public QMainWindow {
     Q_OBJECT
@@ -35,6 +36,7 @@ private:
             painter.setBrush(QColor(0, 255, 0));
             painter.drawRect(300, 300, 150,150);
         }
+        update();
     }
     void mousePressEvent(QMouseEvent *) override {
         sketch = !sketch;
